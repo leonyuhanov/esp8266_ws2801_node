@@ -10,5 +10,7 @@ WiFiUDP Udp;
 //then trasnmit your LED Data block as follows with a 3mili delay
 
 Udp.beginPacketMulticast(IPAddress(239, 0, 0, 57), udpPort, WiFi.localIP(), 1);
+
 Udp.write(dataBlock, blockSize);
+
 delay(3);
